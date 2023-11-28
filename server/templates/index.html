@@ -14,7 +14,7 @@
 </head>
 
 <body class="mx-auto py-2 my-2">
-    <form action="/upload" method="post" enctype="multipart/form-data gap-4 flex p-2">
+    <form action="/upload" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="p-2">
             <input type="file" class="file-input file-input-bordered file-input-accent w-full" name="file"
