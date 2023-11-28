@@ -34,7 +34,7 @@ def request_subtitle(request,fileid):
 
     elif request.method == 'POST':
         dynamodb = boto3.resource('dynamodb', 
-            AWS_ACCESS_KEY_ID_id=AWS_ACCESS_KEY_ID,
+            aws_access_key_id=AWS_ACCESS_KEY_ID,
             aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
             region_name='ap-south-1'
         )
@@ -120,7 +120,7 @@ def save_to_s3(file_name):
 
     # Create an S3 client with specified credentials and region
     s3 = boto3.client('s3', 
-        AWS_ACCESS_KEY_ID_id=AWS_ACCESS_KEY_ID, 
+        aws_access_key_id=AWS_ACCESS_KEY_ID, 
         aws_secret_access_key=os.getenv("AWS_SECRET_ACCESS_KEY"), 
         region_name='ap-south-1'
     )
@@ -131,7 +131,7 @@ def save_to_s3(file_name):
     
 def save_srt_content_to_dynamodb(file_name,subtitle):
     dynamodb = boto3.resource('dynamodb', 
-        AWS_ACCESS_KEY_ID_id=AWS_ACCESS_KEY_ID,
+        aws_access_key_id=AWS_ACCESS_KEY_ID,
         aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
         region_name='ap-south-1'
     )
@@ -147,7 +147,7 @@ def save_srt_content_to_dynamodb(file_name,subtitle):
 
 def save_query_to_dynamo(file_name,subtitles,keyword):
     dynamodb = boto3.resource('dynamodb', 
-        AWS_ACCESS_KEY_ID_id=AWS_ACCESS_KEY_ID,
+        aws_access_key_id=AWS_ACCESS_KEY_ID,
         aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
         region_name='ap-south-1'
     )
