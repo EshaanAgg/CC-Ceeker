@@ -1,5 +1,4 @@
-server/__pycache__
-client/__pycache__
+**/__pycache__
 server/migrations/__pycache__
 db.sqlite**
 .env

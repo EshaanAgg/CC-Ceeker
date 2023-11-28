@@ -1,4 +1,3 @@
-from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.core.files.storage import default_storage
 from .settings import AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY
